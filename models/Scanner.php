@@ -51,8 +51,7 @@
                 return false;
             
             
-    //   http://m3.c8.net.ua/scanner.php?method=getTrafficStat&type=dsp&key=&keyd=&ssp_id=3634&site_id=&format_id=&via=&period=d&timeStart=1&timeEnd=0
-            $target = "http://m3.c8.net.ua/scanner.php?method=getTrafficStat"; 
+            $target = "link"; 
             
             (!empty($params_arr['type'])) ? $target .= "&type=".strval($params_arr['type']) : "";
             (!empty($params_arr['key'])) ? $target .= "&key=".strval($params_arr['key']) : "";
@@ -111,8 +110,7 @@
             //                            &viacustom=domain,dmp_tax,formats
             //                            &debug=1
             
-            $target = $quick ? "http://m3.c8.net.ua/scanner.php?method=getPlannerStat" :
-                                    "http://m3.c8.net.ua/scanner.php?method=initAsyncWork&rmethod=getPlannerStat"; 
+            $target = $quick ? "link1" : "link2"; 
             
             (!empty($params_arr['bidfloor_uah'])) ? $target .= "&bidfloor_uah=".strval($params_arr['bidfloor_uah']) : "";
             (!empty($params_arr['scan_width'])) ? $target .= "&scan_width=".strval($params_arr['scan_width']) : "";
@@ -146,7 +144,7 @@
             if ( empty($params_arr) || !is_array($params_arr) )
                 return false;
             
-            $target = "http://m3.c8.net.ua/scanner.php?method=getAsyncWork&rmethod=getPlannerStat";
+            $target = "link";
             (!empty($params_arr['workid'])) ? $target .= "&workid=".strval($params_arr['workid']) : "";
             //(!empty($params_arr['getStatus'])) ? $target .= "&status" : "";
             
